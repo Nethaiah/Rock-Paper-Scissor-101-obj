@@ -1,55 +1,41 @@
-Rock Paper Scissors 101 Game
-This is a Python program that allows a player to play an advanced version of Rock Paper Scissors against a computer. The program interacts with an API to fetch available game objects and determine the outcome of the match.
+# Rock-Paper-Scissors Game
+==========================
 
-Features
-Fetches all the available game objects (like Rock, Paper, Scissors, etc.) from the RPS 101 API.
-Allows the player to choose an object, while the computer randomly selects one.
-Fetches and displays the result of the match (winner, loser, and outcome) from the RPS 101 API.
-Prerequisites
-Make sure you have the following installed:
+## Introduction
+This is a Rock-Paper-Scissors game implemented in Python. The game fetches the list of available objects from an API, allows the player to choose an object, and then randomly selects an object for the computer. The game then determines the winner based on the game's rules.
 
-Python 3.x
-The requests library: You can install it using pip install requests
-How to Run
-Clone the repository or download the code.
+## Requirements
+* Python 3.x
+* `requests` library for making API requests
+* `random` library for generating random numbers
+* `json` library for parsing JSON responses
 
-Install dependencies using the following command:
+## How to Play
+1. Run the game by executing the `main.py` file.
+2. The game will fetch the list of available objects from the API and display them.
+3. Enter the object you want to choose.
+4. The computer will randomly select an object.
+5. The game will determine the winner based on the game's rules.
 
-bash
-Copy code
-pip install -r requirements.txt
-Note: The only dependency required is the requests library.
+## Functions
+### `fetch_rps_objects()`
+Fetches the list of available objects from the API.
 
-Run the script using Python:
+### `choose_object_p1(objects)`
+Allows the player to choose an object from the list of available objects.
 
-bash
-Copy code
-python rps_game.py
-How it Works
-The game fetches all available objects from the RPS 101 API.
-The player selects an object, and the computer randomly selects one.
-The game sends the selected objects to the API to fetch the result.
-The result includes the winner, loser, and the outcome of the match, which is displayed to the player.
-Code Structure
-fetch_rps_objects(): Fetches the available game objects from the API.
-choose_object_p1(objects): Allows the player to select an object from the list of objects.
-choose_object_computer(objects): Randomly selects an object for the computer.
-fetch_match_result(p1, computer): Fetches the result of the match between the player and the computer.
-main(): Runs the game loop.
-Example Output
-bash
-Copy code
-Player 1 chooses: Rock
-Computer chooses: Scissors
+### `choose_object_computer(objects)`
+Randomly selects an object for the computer.
 
-Winner: Player 1
-Loser: Computer
-Outcome: Rock crushes Scissors
-Notes
-The game will keep running in a loop until you terminate it (e.g., using Ctrl + C).
-If you select an invalid object, you will be prompted to try again.
-API Information
-This game uses the RPS 101 API provided by rps101.pythonanywhere.com.
+### `fetch_match_result(p1, computer)`
+Determines the winner of the game based on the game's rules.
 
-License
-This project is licensed under the MIT License.
+### `main()`
+The main game loop that fetches the list of available objects, allows the player to choose an object, randomly selects an object for the computer, and determines the winner.
+
+## API Endpoints
+* `https://rps101.pythonanywhere.com/api/v1/objects/all`: Fetches the list of available objects.
+* `https://rps101.pythonanywhere.com/api/v1/match?object_one={p1}&object_two={computer}`: Determines the winner of the game.
+
+## License
+This game is licensed under the MIT License.
