@@ -1,5 +1,4 @@
 # Rock-Paper-Scissors Game
-==========================
 
 ## Introduction
 This is a Rock-Paper-Scissors game implemented in Python. The game fetches the list of available objects from an API, allows the player to choose an object, and then randomly selects an object for the computer. The game then determines the winner based on the game's rules.
@@ -11,7 +10,7 @@ This is a Rock-Paper-Scissors game implemented in Python. The game fetches the l
 * `json` library for parsing JSON responses
 
 ## How to Play
-1. Run the game by executing the `main.py` file.
+1. Run the game by executing the file.
 2. The game will fetch the list of available objects from the API and display them.
 3. Enter the object you want to choose.
 4. The computer will randomly select an object.
